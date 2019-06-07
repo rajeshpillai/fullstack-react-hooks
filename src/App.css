@@ -14,6 +14,7 @@
 }
 
 .app-header a {
+  padding-left:10px;
   color: palegreen;
 }
 
@@ -33,9 +34,10 @@
 }
 
 .btn-round{
+  text-align: center;
   display:inline-block;
   font-size:2.2em;
-  line-height:16px;
+  line-height:18px;
   height:30px;
   width:30px;
   border-radius:50%;

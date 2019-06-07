@@ -7,21 +7,30 @@ import Button from './components/button';
 
 
 const defaultState = [
-  { url: "http://algorisys.com", title: "Algorisys", desc: "", category:"" },
-  { url: "https://medium.com/@rajeshpillai", title: "Medium Blog",desc: "", category:""  },
+  { id: 1, url: "http://algorisys.com", title: "Algorisys", desc: "", category:"" },
+  { id: 2,url: "https://medium.com/@rajeshpillai", title: "Medium Blog",desc: "", category:""  },
   
 ];
 function App() {
   const [posts, setPosts] = useState(defaultState);
-  const [showPostForm, togglePostForm] = useState(false);
-
-  function onShowNewPost() {
-    togglePostForm(!showPostForm);
-  }
 
   function addPost(post) {
+    post.id = posts.length;
     setPosts([...posts, post]);
-    onShowNewPost();
+  }
+
+  function editPost(post) {
+    let newPosts = posts.map((p) => {
+      if (p.id === post.id) return post;
+      return p;
+    })
+    setPosts([...newPosts]);
+  }
+
+  function loadEditPost(props) {
+    let idSearch = Number(props.match.params.postId);
+    let post = posts.find((p) => p.id === idSearch);
+    return <PostForm updatePost={editPost} post = {post} />
   }
 
   return (
@@ -29,10 +38,11 @@ function App() {
       <div className="app">
         <header className="app-header">
           <Link to="/">Self Study School</Link>
-          <Link className="btn-newpost" to="/posts/new"><Button onClick={onShowNewPost} /></Link>
+          <Link className="btn-newpost" to="/posts/new"><Button /></Link>
         </header>
-        <Route exact path="/" render={()=><Home posts={posts} onShowNewPost={onShowNewPost} />}></Route>
-        <Route path="/posts/new" render={()=><PostForm addPost={addPost} />}></Route>
+        <Route exact path="/" render={()=><Home posts={posts}  />}></Route>
+        <Route path="/posts/new" render={() => <PostForm updatePost={addPost} />}></Route>
+        <Route path="/posts/edit/:postId" render={loadEditPost}></Route>
       </div>
     </Router>
   );

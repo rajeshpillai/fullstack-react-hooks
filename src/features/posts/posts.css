@@ -36,4 +36,21 @@
   border-bottom: 1px solid rgb(226, 220, 220);
   padding:15px;
   text-align: left;
+  display: flex;
+  flex: 1;
+}
+
+.post-url {
+  flex-basis: 60%;
+  flex-grow:2;
+}
+
+.post a {
+  display: inline-block;
+  flex-grow: 1;
+  border: 1px solid gray;
+  text-decoration: none;
+  margin-left: auto;
+  flex: 1;
+  text-align: center;
 }
