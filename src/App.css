@@ -61,3 +61,18 @@
     transform: rotate(360deg);
   }
 }
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+    color: gray;
+  }
+  50% {
+    opacity: 0.5;
+    color: wheat;
+  }
+  100% {
+    opacity: 1;
+    color: black;
+  }
+}

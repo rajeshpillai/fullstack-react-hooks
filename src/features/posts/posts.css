@@ -10,23 +10,10 @@
   border: 1px solid gray;
   width:80%;
   padding:30px;
-  animation: appear 1.5s;
+  animation: appear 0.5s;
 }
 
-@keyframes appear {
-  0% {
-    opacity: 0;
-    color: gray;
-  }
-  50% {
-    opacity: 0.5;
-    color: wheat;
-  }
-  100% {
-    opacity: 1;
-    color: black;
-  }
-}
+
 
 .form-heading {
   text-align: center;
@@ -53,6 +40,7 @@
 .posts {
   display: flex;
   flex-direction: column;
+  animation: appear 0.5s;
 }
 
 .post {
