@@ -37,7 +37,7 @@ function App() {
     <Router>
       <div className="app">
         <header className="app-header">
-          <Link to="/">Self Study School</Link>
+          <Link to="/"><span className="logo">ക</span>Self Study School</Link>
           <Link className="btn-newpost" to="/posts/new"><Button /></Link>
         </header>
         <Route exact path="/" render={()=><Home posts={posts}  />}></Route>

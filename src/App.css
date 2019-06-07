@@ -19,6 +19,23 @@
   color: palegreen;
 }
 
+.logo {
+  display: inline-block;
+  border: 1px solid rgb(73, 139, 224);
+  border-radius: 50%;
+  width:30px;
+  height:30px;
+  line-height: 30px;
+  background-color: rgb(73, 139, 224);
+
+}
+.logo::after{
+  content: ' ';
+}
+.logo:hover {
+  animation: spin 0.5s;
+}
+
 .btn-newpost {
   padding-right: 20px;
   margin-left: auto;
@@ -45,7 +62,7 @@
   color: white;
 }
 
-.btn-round:hover{
+.btn:hover{
   color:lightgray;
 }
 
@@ -75,4 +92,9 @@
     opacity: 1;
     color: black;
   }
+}
+
+@keyframes spin {
+  from {transform:rotate(0deg);}
+  to {transform:rotate(360deg);}
 }
