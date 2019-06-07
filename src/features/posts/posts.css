@@ -65,3 +65,7 @@
 .post-actions {
   flex-basis: 30%;
 }
+
+.form-field .btn-default {
+  min-width: 120px;
+}
