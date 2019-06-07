@@ -5,8 +5,12 @@ export function Post({ post }) {
   return (
     <div className="post">
       <span className="post-url">{post.url}</span>
-      <Link to={`/posts/edit/${post.id}`}>EDIT</Link>
-      <a href={post.url} target="_blank" title="open in new window">🔗</a>
+
+      <div className="post-actions">
+        <Link className="post-edit-link" to={`/posts/edit/${post.id}`}>EDIT</Link>
+        <a href={post.url} className="post-open-new" target="_blank" title="open in new window">🔗</a>
+
+      </div>
 
     </div>);
 }
