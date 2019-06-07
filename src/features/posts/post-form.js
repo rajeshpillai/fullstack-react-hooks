@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './posts.css';
 
 export default function PostForm(props) {
-  const initialFormState = { id: null, url: "", title: "", desc:"",category:"" }
+  const initialFormState = { id: null, url: "", title: "", desc: "", category: "" }
   const [post, setPost] = useState(initialFormState);
 
   const handleInputChange = event => {
@@ -19,6 +19,7 @@ export default function PostForm(props) {
         setPost(initialFormState)
       }}
     >
+      <h2>NEW POST</h2>
       <div className="form">
         <div className="form-field">
           <label>Url</label>
@@ -36,7 +37,7 @@ export default function PostForm(props) {
           <label>Category</label>
           <input type="text" name="category" value={post.category} onChange={handleInputChange} />
         </div>
-        <button className="btn">Add new post</button>
+        <button className="btn btn-default">Add new post</button>
       </div>
     </form>
   )

@@ -6,26 +6,38 @@
   background-color: #282c34;
   min-height: 10vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
 }
+
 .app-header a {
   color: palegreen;
 }
 
+.btn-newpost {
+  padding-right: 20px;
+  margin-left: auto;
+}
+
 .btn {
   user-select: none;
+  outline: none;
+  padding:10px;
+  border: 0;
+  background:none;
+  box-shadow: none;
+  border-radius: 4px;
 }
 
 .btn-round{
   display:inline-block;
-  font-size:3em;
-  line-height:40px;
-  height:50px;
-  width:50px;
+  font-size:2.2em;
+  line-height:16px;
+  height:30px;
+  width:30px;
   border-radius:50%;
   color: white;
 }
@@ -33,6 +45,7 @@
 .btn-round:hover{
   color:lightgray;
 }
+
 
 .btn-default {
   background-color: rgb(35, 129, 236);

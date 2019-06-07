@@ -7,7 +7,8 @@ export default function Home(props) {
   let view = posts.length === 0 ? <NoPostView /> : <Posts posts={posts} />
 
   return (
-    <div>
+    <div className="posts">
+      <h2>Reading List</h2>
       {view}
     </div>
   );
