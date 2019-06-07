@@ -23,7 +23,7 @@ export default function PostForm(props) {
         setPost(initialFormState)
       }}
     >
-      <h2>{editPost ? "EDIT POST" : "NEW POST"}</h2>
+      <h2 className="form-heading">{editPost ? "EDIT POST" : "NEW POST"}</h2>
       <div className="form">
         <div className="form-field">
           <label>Url</label>
@@ -41,7 +41,9 @@ export default function PostForm(props) {
           <label>Category</label>
           <input type="text" name="category" value={post.category} onChange={handleInputChange} />
         </div>
-        <button className="btn btn-default">{btnLabel}</button>
+        <div className="form-field">
+          <button className="btn btn-default">{btnLabel}</button>
+        </div>
       </div>
     </form>
   )

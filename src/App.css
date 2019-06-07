@@ -1,5 +1,6 @@
 .app {
   text-align: center;
+  margin-left: auto;
 }
 
 .app-header {
@@ -31,6 +32,7 @@
   background:none;
   box-shadow: none;
   border-radius: 4px;
+  min-width:120px;
 }
 
 .btn-round{
@@ -47,7 +49,6 @@
 .btn-round:hover{
   color:lightgray;
 }
-
 
 .btn-default {
   background-color: rgb(35, 129, 236);

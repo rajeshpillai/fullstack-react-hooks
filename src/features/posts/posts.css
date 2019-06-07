@@ -1,29 +1,37 @@
+/* Post form */
+
 .form {
   margin-top:20px;
-  border: 1px solid gray;
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
   align-items: center;
-  height:150px;
   justify-content: space-around;
+  margin: 20px auto;
+  border: 1px solid gray;
+  width:80%;
+  padding:30px;
 }
-
+.form-heading {
+  text-align: center;
+}
 .form-field {
-  width:100px;
+  padding: 5px;
   display: flex;
-  justify-content: flex-end;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .form-field label {
-  padding-left:0;
-  flex-grow: 1;
+  min-width:100px;
+  display: inline-block;
+  text-align: left;
 }
 .form-field input {
-  margin-left:20px;
-  flex: 2;
+  line-height: 1.2em;
 }
 
+
+/* Home post listing*/
 
 .posts {
   display: flex;
