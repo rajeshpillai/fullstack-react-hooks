@@ -12,6 +12,9 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+.app-header a {
+  color: palegreen;
+}
 
 .btn {
   user-select: none;

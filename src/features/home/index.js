@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import Button from '../../components/button';
 import { Posts } from '../posts/posts';
 
 export default function Home(props) {
@@ -9,7 +8,6 @@ export default function Home(props) {
 
   return (
     <div>
-      <Button onClick={props.onShowNewPost} />
       {view}
     </div>
   );
