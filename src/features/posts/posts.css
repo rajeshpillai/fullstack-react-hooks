@@ -1,0 +1,28 @@
+.form {
+  margin-top:20px;
+  border: 1px solid gray;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  height:150px;
+  justify-content: space-around;
+}
+
+.form-field {
+  width:100px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.form-field label {
+  padding-left:0;
+  flex-grow: 1;
+}
+.form-field input {
+  margin-left:20px;
+  flex: 2;
+}
+
+.form button {
+}
