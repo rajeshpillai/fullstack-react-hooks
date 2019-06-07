@@ -58,11 +58,28 @@
   line-height:18px;
   height:30px;
   width:30px;
+}
+
+.btn {
+  user-select: none;
+}
+
+.btn-round{
+  display:inline-block;
+  font-size:2em;
+  line-height:18px;
+  height:30px;
+  width:30px;
   border-radius:50%;
   color: white;
 }
 
-.btn:hover{
+
+.btn-default {
+  background-color: rgb(35, 129, 236);
+}
+
+.btn-round:hover{
   color:lightgray;
 }
 

@@ -40,7 +40,7 @@ function App() {
           <Link to="/"><span className="logo">ക</span>Self Study School</Link>
           <Link className="btn-newpost" to="/posts/new"><Button /></Link>
         </header>
-        <Route exact path="/" render={()=><Home posts={posts}  />}></Route>
+        <Route exact path="/" render={() => <Home posts={posts} />}></Route>
         <Route path="/posts/new" render={() => <PostForm updatePost={addPost} />}></Route>
         <Route path="/posts/edit/:postId" render={loadEditPost}></Route>
       </div>
