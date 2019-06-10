@@ -16,8 +16,10 @@ export function SubCategories({ data }) {
     : loadData(data);
 
   return (
-    <div className="categories">
-      {view}
+    <div className="categories-container ">
+      <div className="categories">
+        {view}
+      </div>
     </div>
   );
 }

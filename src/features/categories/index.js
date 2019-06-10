@@ -19,6 +19,7 @@ export function Categories({ data }) {
     <div className="categories">
       {view}
     </div>
+
   );
 }
 
