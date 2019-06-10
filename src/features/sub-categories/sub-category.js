@@ -4,6 +4,6 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 export function SubCategory({ data }) {
   return (
     <div className="category">
-      {data.title}
+      <Link to={`/categories/${data.categoryId}/${data.id}/posts`}>{data.title}</Link>
     </div>);
 }

@@ -1,15 +1,15 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 
-export function Post({ post }) {
+export function Post({ data }) {
   return (
     <div className="post">
-      <a href={post.url} className="post-url"
-        target="_blank" title="open in new window">{post.title}🔗</a>
-      <Link to="">{post.category}</Link>
+      <a href={data.url} className="post-url"
+        target="_blank" title="open in new window">{data.title}🔗</a>
+      <Link to="">{data.category}</Link>
 
       <div className="post-actions">
-        <Link className="post-edit-link" to={`/posts/edit/${post.id}`}>EDIT</Link>
+        <Link className="post-edit-link" to={`/posts/edit/${data.id}`}>EDIT</Link>
       </div>
     </div>);
 }

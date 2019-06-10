@@ -5,13 +5,32 @@ import Home from './features/home';
 import PostForm from './features/posts/post-form';
 import Button from './components/button';
 import { SubCategories } from './features/sub-categories';
+import { Posts } from './features/posts';
 
 
 const defaultPosts = [
-  { id: 1, url: "http://algorisys.com", title: "Algorisys", desc: "", category: "Beginner" },
-  { id: 2, url: "https://medium.com/@rajeshpillai", title: "Medium Blog", desc: "", category: "Beginner" },
-  { id: 3, url: "https://codeproject.com", title: "CodeProject", desc: "", category: "Website" },
-  { id: 4, url: "https://udemy.com", title: "Udemy", desc: "", category: "Advanced" },
+  {
+    id: 1, url: "http://algorisys.com", title: "Learn HTML", content: "",
+    categoryId: 1, subCategoryId: 1,
+    subPosts: [
+      { id: 1, title: "Post 1", content: "Content 1", url: "#" },
+      { id: 2, title: "Post 2", content: "Content 2", url: "#"  },
+      { id: 4, title: "Post 3", content: "Content 3", url: "#"  },
+      { id: 5, title: "Post 4", content: "Content 4", url: "#" },
+    ]
+  },
+  {
+    id: 2, url: "https://medium.com/@rajeshpillai", title: "Medium Blog", content: "",
+    categoryId: 1, subCategoryId: 1
+  },
+  {
+    id: 3, url: "https://codeproject.com", title: "CodeProject", content: "",
+    categoryId: 1, subCategoryId: 1
+  },
+  {
+    id: 4, url: "https://udemy.com", title: "Udemy", content: "",
+    categoryId: 1, subCategoryId: 1
+  },
 ];
 
 const categories = [
@@ -24,12 +43,12 @@ const categories = [
 ]
 
 const subCategories = [
-  { id: 1, catId: 1, title: "HTML" },
-  { id: 2, catId: 1, title: "CSS" },
-  { id: 3, catId: 1, title: "JavaScript" },
-  { id: 4, catId: 1, title: "React" },
-  { id: 5, catId: 1, title: "Angular" },
-  { id: 6, catId: 1, title: "Vue" },
+  { id: 1, categoryId: 1, title: "HTML" },
+  { id: 2, categoryId: 1, title: "CSS" },
+  { id: 3, categoryId: 1, title: "JavaScript" },
+  { id: 4, categoryId: 1, title: "React" },
+  { id: 5, categoryId: 1, title: "Angular" },
+  { id: 6, categoryId: 1, title: "Vue" },
 ]
 
 
@@ -58,9 +77,18 @@ function App() {
   function loadSubCategories(props) {
     let idSearch = Number(props.match.params.subId);
     let result = subCategories.filter((subCat) => {
-      return subCat.catId == idSearch;
+      return subCat.categoryId == idSearch;
     })
     return <SubCategories data={result} />
+  }
+
+  function loadPosts(props) {
+    let catId = Number(props.match.params.catId);
+    let subId = Number(props.match.params.subId);
+    let result = defaultPosts.find((post) => {
+      return post.subCategoryId == subId && post.categoryId == catId;
+    });
+    return <Posts data={result} />
   }
 
   return (
@@ -74,6 +102,7 @@ function App() {
         <Route path="/posts/new" render={() => <PostForm updatePost={addPost} />}></Route>
         <Route path="/posts/edit/:postId" render={loadEditPost}></Route>
         <Route path="/categories/sub/:subId" render={loadSubCategories}></Route>
+        <Route path="/categories/:catId/:subId/posts" render={loadPosts}></Route>
       </div>
     </Router>
   );
