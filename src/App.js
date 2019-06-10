@@ -7,8 +7,8 @@ import Button from './components/button';
 
 
 const defaultState = [
-  { id: 1, url: "http://algorisys.com", title: "Algorisys", desc: "", category:"" },
-  { id: 2,url: "https://medium.com/@rajeshpillai", title: "Medium Blog",desc: "", category:""  },
+  { id: 1, url: "http://algorisys.com", title: "Algorisys", desc: "", category:"Beginner" },
+  { id: 2,url: "https://medium.com/@rajeshpillai", title: "Medium Blog",desc: "", category:"Beginner"  },
   
 ];
 function App() {

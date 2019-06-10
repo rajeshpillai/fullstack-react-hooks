@@ -43,7 +43,6 @@
 
 .btn {
   user-select: none;
-  outline: none;
   padding:10px;
   border: 0;
   background:none;
@@ -77,6 +76,7 @@
 
 .btn-default {
   background-color: rgb(35, 129, 236);
+  color: white;
 }
 
 .btn-round:hover{
