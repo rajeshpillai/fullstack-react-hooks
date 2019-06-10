@@ -1,22 +1,23 @@
-import React, { useState } from 'react';
-import Button from '../../components/button';
-import { Posts } from '../posts/posts';
+import React from 'react';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
+import { Categories } from '../categories';
+
+import '../categories/categories.css';
 
 export default function Home(props) {
-  const { posts } = props;
+  const { categories } = props;
 
-  function NoPostView(props) {
-    return <h1>No posts yet! Be awesome and create some!</h1>;
+  function NoDataView(props) {
+    return <h1>No caegories yet! Be awesome and create some!</h1>;
   }
 
-  let view = posts.length === 0 ? <NoPostView /> : <Posts posts={posts} />
+  let view = categories.length === 0
+    ? <NoDataView />
+    : <Categories data={categories} />
 
   return (
-    <div className="posts">
-      <h2>Reading List</h2>
-      <div>
-        {view}
-      </div>
+    <div className="categories-container ">
+      {view}
     </div>
   );
 }        

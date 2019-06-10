@@ -1,0 +1,23 @@
+.categories-container {
+  margin: 2rem;
+}
+.categories  {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.category  {
+  flex: 1 1 100px;
+  align-self: center;
+  font-size: 1.2em;
+  word-wrap: break-word;
+  min-height: 20vh;
+  border-radius: 4px;
+  background-color: lightgrey;
+  border: 1px solid lightgrey;
+  margin: 5px;
+  text-align: center;
+}
