@@ -9,6 +9,8 @@ import Button from './components/button';
 const defaultState = [
   { id: 1, url: "http://algorisys.com", title: "Algorisys", desc: "", category:"Beginner" },
   { id: 2,url: "https://medium.com/@rajeshpillai", title: "Medium Blog",desc: "", category:"Beginner"  },
+  { id: 3, url: "https://codeproject.com", title: "CodeProject", desc: "", category:"Website" },
+  { id: 4,url: "https://udemy.com", title: "Udemy",desc: "", category:"Advanced"  },
   
 ];
 function App() {

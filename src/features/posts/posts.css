@@ -57,6 +57,7 @@
 .post > * {
   padding: 10px;
   width:30%;
+  text-align: left;
 }
 
 .post-url {
